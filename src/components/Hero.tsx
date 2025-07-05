@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -35,20 +35,20 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left mb-8 lg:mb-0">
             <div className="mb-6">
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-2 animate-fade-in">
+              <p className="text-lg text-gray-400 mb-2 animate-fade-in">
                 Hello, I'm
               </p>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
                   Dhruvi Padhiyar
                 </span>
               </h1>
-              <p className="text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 font-medium animate-fade-in-up animation-delay-200">
+              <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-medium animate-fade-in-up animation-delay-200">
                 Full Stack Developer
               </p>
             </div>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
+            <p className="text-lg text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
               Passionate about creating exceptional digital experiences through clean code and innovative solutions.
               Specializing in modern web technologies and user-centered design.
             </p>
@@ -63,7 +63,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={() => window.location.href = 'mailto:dhruvipadhiyar274@gmail.com'}
-                className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg font-medium hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transform hover:scale-105 transition-all duration-300"
+                className="px-8 py-3 border-2 border-blue-400 text-blue-400 rounded-lg font-medium hover:bg-blue-400 hover:text-white transform hover:scale-105 transition-all duration-300"
               >
                 Get In Touch
               </button>
@@ -77,10 +77,10 @@ const Hero = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transform hover:scale-110 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white group"
+                  className="p-3 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transform hover:scale-110 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white group"
                   title={social.label}
                 >
-                  <social.icon className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  <social.icon className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </a>
               ))}
             </div>
@@ -89,29 +89,29 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end mb-8 lg:mb-0">
             <div className="relative animate-fade-in-up animation-delay-400">
-              <div className="w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 relative">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 relative">
                 {/* Floating Tech Icons */}
                 <div className="absolute inset-0">
-                  <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg animate-float">
-                    <span className="text-white text-2xl font-bold">⚛️</span>
+                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg animate-float">
+                    <span className="text-white text-lg sm:text-2xl font-bold">⚛️</span>
                   </div>
-                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-1000">
-                    <span className="text-white text-2xl font-bold">JS</span>
+                  <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-1000">
+                    <span className="text-white text-lg sm:text-2xl font-bold">JS</span>
                   </div>
-                  <div className="absolute top-1/2 -left-4 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-2000">
-                    <span className="text-white text-2xl font-bold">🐍</span>
+                  <div className="absolute top-1/2 -left-2 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-2000">
+                    <span className="text-white text-lg sm:text-2xl font-bold">🐍</span>
                   </div>
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-[3000ms]">
-                    <span className="text-white text-2xl font-bold">🔥</span>
+                  <div className="absolute -top-4 sm:-top-6 left-1/2 -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-[3000ms]">
+                    <span className="text-white text-lg sm:text-2xl font-bold">🔥</span>
                   </div>
-                  <div className="absolute bottom-4 right-4 w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-[4000ms]">
-                    <span className="text-white text-2xl font-bold">🐘</span>
+                  <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg animate-float animation-delay-[4000ms]">
+                    <span className="text-white text-lg sm:text-2xl font-bold">🐘</span>
                   </div>
                 </div>
 
                 {/* Main Profile Circle */}
                 <div className="w-full h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-2xl">
-                  <div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center overflow-hidden">
+                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center overflow-hidden">
                     <img 
                       src={imageUrl}
                       alt="Female Developer" 
@@ -141,12 +141,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button
-          onClick={() => scrollToSection('about')}
-          className="p-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          <ChevronDown className="w-6 h-6 text-gray-600 dark:text-gray-400" />
-        </button>
+        {/* <ChevronDown className="w-6 h-6 text-gray-400" /> */}
       </div>
     </section>
   );

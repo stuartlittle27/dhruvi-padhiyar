@@ -34,7 +34,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="about" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -42,16 +42,16 @@ const About = () => {
               About Me
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             I'm a Software Developer specializing in Laravel, JavaScript, and backend systems. I enjoy building real-world solutions, from backend APIs to Chrome extensions.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">My Journey</h3>
-              <div className="space-y-4 text-gray-600 dark:text-gray-400">
+                  <div className="bg-gray-900 rounded-2xl p-8 shadow-xl mb-8">
+        <h3 className="text-2xl font-bold mb-6 text-white">My Journey</h3>
+        <div className="space-y-4 text-gray-400">
                 <p>
                   I started my development career with strong curiosity and dedication. Over time, I've worked on real-time apps, browser extensions, and Laravel-based platforms.
                 </p>
@@ -65,12 +65,12 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-900 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gray-900 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 dark:text-gray-400 font-medium">
+                  <div className="text-gray-400 font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -79,7 +79,7 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white">What I Do</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white">What I Do</h3>
             {highlights.map((highlight, index) => (
               <div
                 key={index}

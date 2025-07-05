@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useTheme } from './ThemeContext';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
-  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -52,14 +50,14 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg' 
+        ? 'bg-gray-900/80 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
+            className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
             Dhruvi Padhiyar
@@ -71,10 +69,10 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 ${
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 hover:text-blue-400 ${
                   activeSection === link.id 
-                    ? 'text-blue-600 dark:text-blue-400' 
-                    : 'text-gray-700 dark:text-gray-300'
+                    ? 'text-blue-400' 
+                    : 'text-gray-300'
                 }`}
               >
                 {link.label}
@@ -83,29 +81,17 @@ const Navigation = () => {
                 )}
               </button>
             ))}
-            
-            {/* Theme Toggle */}
-
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-            >
-              {theme === 'light' ? 
-                <Moon className="w-5 h-5 text-gray-600 dark:text-gray-400" /> : 
-                <Sun className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-              }
-            </button>
+          <div className="md:hidden flex items-center space-x-2 sm:space-x-4">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+              className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
             >
               {isMobileMenuOpen ? 
-                <X className="w-6 h-6 text-gray-600 dark:text-gray-400" /> : 
-                <Menu className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400" /> : 
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400" />
               }
             </button>
           </div>
@@ -113,15 +99,15 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg">
+          <div className="md:hidden mt-4 py-4 bg-gray-900/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-700">
             {navLinks.map(link => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`block w-full text-left px-6 py-3 text-sm font-medium transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 ${
+                className={`block w-full text-left px-4 sm:px-6 py-3 text-sm font-medium transition-colors duration-300 hover:bg-gray-800 ${
                   activeSection === link.id 
-                    ? 'text-blue-600 dark:text-blue-400 bg-gray-50 dark:bg-gray-800' 
-                    : 'text-gray-700 dark:text-gray-300'
+                    ? 'text-blue-400 bg-gray-800' 
+                    : 'text-gray-300'
                 }`}
               >
                 {link.label}

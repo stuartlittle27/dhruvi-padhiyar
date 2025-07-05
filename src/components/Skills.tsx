@@ -45,14 +45,14 @@ const Skills = () => {
   const SkillBar = ({ skill }: { skill: { name: string; level: number } }) => (
     <div className="mb-6">
       <div className="flex justify-between items-center mb-2">
-        <span className="text-gray-700 dark:text-gray-300 font-medium">
+        <span className="text-gray-300 font-medium">
           {skill.name}
         </span>
-        <span className="text-blue-600 dark:text-blue-400 font-semibold">
+        <span className="text-blue-400 font-semibold">
           {skill.level}%
         </span>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div className="w-full bg-gray-700 rounded-full h-3">
         <div
           className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${skill.level}%` }}
@@ -62,7 +62,7 @@ const Skills = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+    <section id="skills" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -71,7 +71,7 @@ const Skills = () => {
               Skills & Expertise
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life
           </p>
         </div>
@@ -81,9 +81,9 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              <h3 className="text-2xl font-bold text-center mb-8 text-gray-800 dark:text-white">
+              <h3 className="text-2xl font-bold text-center mb-8 text-white">
                 {category.title}
               </h3>
               <div>
@@ -97,7 +97,7 @@ const Skills = () => {
 
         {/* Additional Skills Cloud */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white">
+          <h3 className="text-2xl font-bold mb-8 text-white">
             Additional Technologies
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -113,7 +113,7 @@ const Skills = () => {
             ].map((tech, index) => (
               <span
                 key={index}
-                className="px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-200 rounded-full font-medium hover:from-blue-200 hover:to-purple-200 dark:hover:from-blue-800/50 dark:hover:to-purple-800/50 transition-all duration-300 cursor-default"
+                className="px-6 py-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 text-blue-200 rounded-full font-medium hover:from-blue-800/50 hover:to-purple-800/50 transition-all duration-300 cursor-default"
               >
                 {tech}
               </span>

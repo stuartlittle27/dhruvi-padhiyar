@@ -4,7 +4,7 @@ import { socialLinks as baseSocialLinks } from './socialLinks';
 
 const socialLinks = [
   ...baseSocialLinks,
-  { icon: Eye, href: '/assets/resume.pdf', label: 'View Resume' }
+  { icon: Eye, href: `${import.meta.env.BASE_URL}assets/resume.pdf`, label: 'View Resume' }
 ];
 
 const Hero = () => {
@@ -14,6 +14,9 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  // Debug: Log the image URL being used
+  const imageUrl = `${import.meta.env.BASE_URL}assets/coding_girl_ai.png`;
 
   return (
     <section
@@ -110,10 +113,24 @@ const Hero = () => {
                 <div className="w-full h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-2xl">
                   <div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/assets/coding_girl_ai.png" 
+                      src={imageUrl}
                       alt="Female Developer" 
                       className="w-full h-full object-cover rounded-full shadow-xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        // console.error('Image failed to load:', target.src);
+                        // Fallback to a placeholder
+                        target.style.display = 'none';
+                        target.nextElementSibling?.classList.remove('hidden');
+                      }}
+                      onLoad={() => {
+                        // console.log('Image loaded successfully');
+                      }}
                     />
+                    {/* Fallback placeholder */}
+                    <div className="hidden w-full h-full flex items-center justify-center text-4xl text-gray-400">
+                      👩‍💻
+                    </div>
                   </div>
                 </div>
               </div>

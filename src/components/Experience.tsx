@@ -8,7 +8,7 @@ const Experience = () => {
     {
       title: 'Laravel Developer',
       company: 'Aipxperts Technolabs',
-      location: 'Remote',
+      location: 'Ahmedabad, Gujarat, India',
       period: 'Apr 2024 – Present',
       description:
         'Working on backend development using Laravel, building RESTful APIs, database design, and implementing secure business logic.',
@@ -23,7 +23,7 @@ const Experience = () => {
     {
       title: 'Laravel Trainee',
       company: 'Aipxperts Technolabs',
-      location: 'Remote',
+      location: 'Ahmedabad, Gujarat, India',
       period: 'Nov 2023 – Apr 2024',
       description:
         'Focused on learning Laravel fundamentals including MVC, Eloquent ORM, REST APIs, and authentication while contributing to internal tasks.',

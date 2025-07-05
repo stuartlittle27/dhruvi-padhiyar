@@ -4,12 +4,12 @@ import { ExternalLink, Github, Filter } from 'lucide-react';
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'web', label: 'Web Apps' },
-    { id: 'mobile', label: 'Mobile' },
-    { id: 'api', label: 'APIs' }
-  ];
+  // const filters = [
+  //   { id: 'all', label: 'All Projects' },
+  //   { id: 'web', label: 'Web Apps' },
+  //   { id: 'mobile', label: 'Mobile' },
+  //   { id: 'api', label: 'APIs' }
+  // ];
 
   const projects = [
     {
@@ -76,7 +76,7 @@ const Projects = () => {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       // demoUrl: 'https://github.com/stuartlittle27/lsr1835',
       githubUrl: 'https://github.com/stuartlittle27/MindYourHealth',
-      features: ['Data Visualization', 'Statistical Analysis', 'CSV Data Processing']
+      features: ['Awareness', 'Data Analysis', 'Mental Health']
     }
   ];
   
@@ -92,7 +92,7 @@ const Projects = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Featured Projects
+              Projects
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ const Projects = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-4 mb-12">
           {filters.map(filter => (
             <button
               key={filter.id}
@@ -118,7 +118,7 @@ const Projects = () => {
               </div>
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">

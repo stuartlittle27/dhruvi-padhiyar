@@ -9,32 +9,34 @@ const Skills = () => {
         { name: 'Laravel', level: 90 },
         { name: 'CodeIgniter', level: 80 },
         { name: 'Livewire', level: 80 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'HTML', level: 90 },
-        { name: 'CSS', level: 85 },
+        // { name: 'JavaScript', level: 85 },
+        // { name: 'HTML', level: 90 },
+        // { name: 'CSS', level: 85 },
         { name: 'JQuery', level: 80 },
+        { name: 'Python', level: 70 },
         { name: 'MERN Stack', level: 70 }
       ]
     },
     {
-      title: 'Backend & APIs',
+      title: 'Database & APIs',
       skills: [
         { name: 'RESTful APIs', level: 90 },
         { name: 'MySQL', level: 85 },
         { name: 'MongoDB', level: 75 },
-        { name: 'Web Scraping', level: 65 }
+        { name: 'Postman', level: 65 }
       ]
     },
     {
       title: 'Version Control & Tools',
       skills: [
         { name: 'Git', level: 90 },
+        { name: 'Bitbucket', level: 90 },
         { name: 'Pusher', level: 75 },
-        { name: 'Socket.io', level: 75 },
-        { name: 'Python', level: 70 },
-        { name: 'Pandas', level: 70 },
-        { name: 'NumPy', level: 70 },
-        { name: 'Matplotlib', level: 65 }
+        { name: 'Jira', level: 65 },
+        // { name: 'Python', level: 70 },
+        // { name: 'Pandas', level: 70 },
+        // { name: 'NumPy', level: 70 },
+        // { name: 'Matplotlib', level: 65 }
       ]
     }
   ];

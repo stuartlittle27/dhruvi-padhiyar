@@ -2,8 +2,6 @@ import React from 'react';
 import { Calendar, MapPin, ChevronRight } from 'lucide-react';
 
 const Experience = () => {
- // Entire Experience.tsx updated as per Aipxperts details
-
   const experiences = [
     {
       title: 'Laravel Developer',
@@ -35,16 +33,13 @@ const Experience = () => {
     }
   ];
 
-
   return (
     <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Work Experience
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+            Work Experience
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             My professional journey and achievements in software development
@@ -54,18 +49,17 @@ const Experience = () => {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 hidden md:block"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 hidden md:block"></div>
 
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-12 last:mb-0">
               {/* Timeline Marker */}
-              <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-gray-800 hidden md:block"></div>
-              
+              <div className="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-800 hidden md:block"></div>
               {/* Content Card */}
-              <div className="md:ml-16 bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <div className="md:ml-16 bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {exp.title}
                     </h3>
                     <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
@@ -90,7 +84,7 @@ const Experience = () => {
 
                 {/* Achievements */}
                 <div className="mb-6">
-                  <h5 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
+                  <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                     Key Achievements:
                   </h5>
                   <ul className="space-y-2">
@@ -108,14 +102,14 @@ const Experience = () => {
 
                 {/* Technologies */}
                 <div>
-                  <h5 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
+                  <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                     Technologies Used:
                   </h5>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium"
                       >
                         {tech}
                       </span>

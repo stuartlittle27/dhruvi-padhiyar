@@ -79,10 +79,8 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Get In Touch
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+            Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Let's work together on your next project. I'm always open to discussing new opportunities.
@@ -92,7 +90,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
               Let's Start a Conversation
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
@@ -104,16 +102,16 @@ const Contact = () => {
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                    <info.icon className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {info.title}
                     </h4>
                     <a
                       href={info.href}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
                     >
                       {info.value}
                     </a>
@@ -123,9 +121,9 @@ const Contact = () => {
             </div>
 
             {/* Quick Response Promise */}
-            <div className="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+            <div className="mt-8 p-6 bg-gray-100 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-blue-600" />
+                <CheckCircle className="w-6 h-6 text-blue-500" />
                 <div>
                   <h4 className="font-semibold text-blue-800 dark:text-blue-200">
                     Quick Response Guaranteed
@@ -139,7 +137,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Web3Forms reCAPTCHA */}
               <input type="hidden" name="recaptcha" value="true" />
@@ -209,11 +207,11 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center space-x-2 ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 shadow-lg hover:shadow-xl'
-                } text-white`}
+                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                }`}
               >
                 {isSubmitting ? (
                   <>

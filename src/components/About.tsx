@@ -37,10 +37,8 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              About Me
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-100">
+            About Me
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             I'm a Software Developer specializing in Laravel, JavaScript, and backend systems. I enjoy building real-world solutions, from backend APIs to Chrome extensions.
@@ -49,9 +47,9 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-                  <div className="bg-gray-900 rounded-2xl p-8 shadow-xl mb-8">
-        <h3 className="text-2xl font-bold mb-6 text-white">My Journey</h3>
-        <div className="space-y-4 text-gray-400">
+            <div className="bg-gray-900 rounded-2xl p-8 mb-8 border border-gray-700">
+              <h3 className="text-2xl font-bold mb-6 text-white">My Journey</h3>
+              <div className="space-y-4 text-gray-400">
                 <p>
                   I started my development career with strong curiosity and dedication. Over time, I've worked on real-time apps, browser extensions, and Laravel-based platforms.
                 </p>
@@ -65,7 +63,7 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-gray-900 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gray-900 rounded-xl p-6 text-center border border-gray-700"
                 >
                   <div className="text-3xl font-bold text-blue-400 mb-2">
                     {stat.number}
@@ -83,16 +81,16 @@ const About = () => {
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="flex items-start space-x-4 p-6 bg-gray-900 rounded-xl border border-gray-700"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                  <highlight.icon className="w-6 h-6 text-white" />
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                  <highlight.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                  <h4 className="text-lg font-semibold text-white mb-2">
                     {highlight.title}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-gray-400">
                     {highlight.description}
                   </p>
                 </div>
@@ -108,10 +106,10 @@ const About = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transform hover:scale-110 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white group"
+              className="p-3 bg-gray-900 rounded-lg border border-gray-700 hover:bg-gray-800 text-gray-400 hover:text-blue-400 transition-colors duration-200 group"
               title={social.label}
             >
-              <social.icon className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-white transition-colors duration-300" />
+              <social.icon className="w-6 h-6" />
             </a>
           ))}
         </div>

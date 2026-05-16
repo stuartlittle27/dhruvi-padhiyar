@@ -52,9 +52,9 @@ const Skills = () => {
           {skill.level}%
         </span>
       </div>
-              <div className="w-full bg-gray-700 rounded-full h-3">
+      <div className="w-full bg-gray-700 rounded-full h-3">
         <div
-          className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-1000 ease-out"
+          className="bg-blue-500 h-3 rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${skill.level}%` }}
         ></div>
       </div>
@@ -66,10 +66,8 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Skills & Expertise
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-100">
+            Skills & Expertise
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life
@@ -81,7 +79,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-gray-800 rounded-2xl p-8 border border-gray-700"
             >
               <h3 className="text-2xl font-bold text-center mb-8 text-white">
                 {category.title}
@@ -113,7 +111,7 @@ const Skills = () => {
             ].map((tech, index) => (
               <span
                 key={index}
-                className="px-6 py-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 text-blue-200 rounded-full font-medium hover:from-blue-800/50 hover:to-purple-800/50 transition-all duration-300 cursor-default"
+                className="px-6 py-3 bg-gray-800 text-blue-200 rounded-full font-medium transition-all duration-200 cursor-default"
               >
                 {tech}
               </span>

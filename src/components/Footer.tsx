@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <button
               onClick={scrollToTop}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              className="text-2xl font-bold text-gray-900 dark:text-gray-100 hover:text-blue-500 transition-colors duration-200"
             >
               Dhruvi Padhiyar
             </button>
@@ -34,7 +34,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 text-gray-600 dark:text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300 group"
+                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-200 group"
                 title={social.label}
               >
                 <social.icon className="w-5 h-5" />

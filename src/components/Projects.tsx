@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Filter } from 'lucide-react';
+import { Github, Chrome, BarChart2, MessageCircle, HeartPulse, Brain, ExternalLink, FileText } from 'lucide-react';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -16,7 +16,7 @@ const Projects = () => {
       id: 1,
       title: 'Jira Backlog Export Extension',
       description: 'Chrome Extension to export all Jira backlog tasks to CSV by entering the board name, simplifying data sharing.',
-      image: '📝',
+      icon: Chrome,
       category: 'web',
       technologies: ['Chrome Extension', 'JavaScript', 'Jira API'],
       // demoUrl: 'https://github.com/stuartlittle27/jira-backlog-export',
@@ -27,7 +27,7 @@ const Projects = () => {
       id: 2,
       title: 'LM Documentation Redirect Extension',
       description: 'Chrome Extension that redirects users to official Bootstrap or Laravel docs based on their search query.',
-      image: '🔗',
+      icon: FileText,
       category: 'web',
       technologies: ['Chrome Extension', 'JavaScript', 'Bootstrap Docs', 'Laravel Docs'],
       // demoUrl: 'https://github.com/stuartlittle27/lm-extension',
@@ -38,7 +38,7 @@ const Projects = () => {
       id: 3,
       title: 'Suicide Rate Data Analysis',
       description: 'Analyzed and visualized global suicide rate data using Python and data science libraries.',
-      image: '📊',
+      icon: BarChart2,
       category: 'api',
       technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
       // demoUrl: '#',
@@ -49,7 +49,7 @@ const Projects = () => {
       id: 4,
       title: 'Real-Time Chat App (Laravel + Pusher)',
       description: 'A real-time chat application built with Laravel using Pusher for instant messaging.',
-      image: '💬',
+      icon: MessageCircle,
       category: 'web',
       technologies: ['Laravel', 'Pusher', 'WebSockets'],
       // demoUrl: '#',
@@ -60,7 +60,7 @@ const Projects = () => {
       id: 5,
       title: 'Saral Health',
       description: 'A MERN-based system to digitize hospital paperwork, providing smart prescription suggestions to streamline and accelerate healthcare workflows.',
-      image: '📡',
+      icon: HeartPulse,
       category: 'web',
       technologies: ['MERN Stack', 'Node.js', 'Express.js', 'MongoDB', 'React.js', 'Redux', 'Tailwind CSS', 'Material UI'],
       // demoUrl: '#',
@@ -71,7 +71,7 @@ const Projects = () => {
       id: 6,
       title: 'Mind Your Health',
       description: 'An impactful project focused on raising awareness about mental health, analyzing trends, and addressing current mental health challenges through data-driven insights.',
-      image: '🌌',
+      icon: Brain,
       category: 'web',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       // demoUrl: 'https://github.com/stuartlittle27/lsr1835',
@@ -86,16 +86,15 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Projects
-            </span>
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-3 text-gray-900 dark:text-white inline-block relative">
+            Projects
+            <span className="block w-16 h-1 bg-blue-500 rounded-full mx-auto mt-4"></span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-6">
             Some of my recent work showcasing different technologies and solutions
           </p>
         </div>
@@ -121,54 +120,32 @@ const Projects = () => {
         </div> */}
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
           {filteredProjects.map(project => (
             <div
               key={project.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group"
+              className="relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow hover:shadow-lg transition-all duration-200 group hover:border-blue-500 dark:hover:border-blue-500"
             >
-              {/* Project Image */}
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-6xl relative overflow-hidden">
-                <span className="transform group-hover:scale-110 transition-transform duration-300">
-                  {project.image}
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  {/* <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white/90 dark:bg-gray-900/90 rounded-full hover:bg-white dark:hover:bg-gray-900 transition-colors duration-300"
-                  >
-                    <ExternalLink className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                  </a> */}
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white/90 dark:bg-gray-900/90 rounded-full hover:bg-white dark:hover:bg-gray-900 transition-colors duration-300"
-                    >
-                      <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                    </a>
-                  )}
+              {/* Accent Bar */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-blue-500" />
+              {/* Project Icon */}
+              <div className="flex items-center justify-center mt-10 mb-6">
+                <div className="w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-5xl shadow-inner border-2 border-blue-200 dark:border-blue-800">
+                  {project.icon && React.createElement(project.icon, { className: 'w-12 h-12 text-blue-500 dark:text-blue-400' })}
                 </div>
               </div>
-
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3">
+              <div className="px-8 pb-8">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
                   {project.title}
+                  <span className="block w-6 h-1 bg-blue-500 rounded-full" />
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                   {project.description}
                 </p>
-
                 {/* Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-800 dark:text-white mb-2">
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                     Key Features:
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -182,10 +159,9 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Technologies */}
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-800 dark:text-white mb-2">
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                     Technologies:
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -199,13 +175,27 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
+                {/* GitHub Link */}
+                {project.githubUrl && (
+                  <div className="mt-6">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-200"
+                    >
+                      <Github className="w-5 h-5" />
+                      View on GitHub
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             Want to see more of my work?
           </p>
@@ -213,7 +203,7 @@ const Projects = () => {
             href="https://github.com/stuartlittle27"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-200"
           >
             <Github className="w-5 h-5" />
             View All Projects on GitHub
